@@ -27,7 +27,8 @@ app.post('/api/v1/quiz', function (req, res) {
     }
 })
 
-var listener = app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+var listener = app.listen(PORT, () => {
     console.log(listener.address().port)
     console.log('Running...')
 })
